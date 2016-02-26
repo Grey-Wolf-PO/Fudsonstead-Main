@@ -1,0 +1,26 @@
++(){
+bc -l <<< "$1+$2"
+}
+x(){
+bc -l <<< "$1*$2"
+}
+divide(){
+bc -l <<< "$1/$2"
+}
+-(){
+bc -l <<< "$1-$2"
+}
+
+##########################################################################################
+
+#Commands
+
+##########################################################################################
+
+#+: Adds two numbers. Syntax: + 1 2 would result in 3. (1 + 2)
+
+#x: Multiplies two numbers. Syntax: x 1 2 would result in 2. (1 x 2)
+
+#divide: Divides first put by second. Syntax: divide 10 5 would result in 2. (10 / 5)
+
+#-: Subtracts second number from first. Syntax: - 9 3 would result in 6. (9 - 3)

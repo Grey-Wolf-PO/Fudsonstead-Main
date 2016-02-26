@@ -1,0 +1,33 @@
+cd desktop
+alias fls="ls -alt"
+alias nn="nano"
+alias cnf="touch"
+alias gip="ping"
+alias mf="mkdir"
+alias cdd="cd desktop"
+alias cdu="cd .."
+alias js="node"
+rb(){
+cd Code
+node TigerBot\ 2.js
+}
+alias pr="read"
+alias pf="cat"
+alias prn="say"
+alias cv="say If you hear this, your volume can be heard"
+mkdt(){
+touch $1
+echo $2 > $1
+if [ $# == 3 ]
+then
+mkdir $3
+mv $1 $3
+fi
+}
+edtbp(){
+cd ..
+nano .bash_profile
+}
+
+#Can you guess what the code above does? It creates a bunch 
+#of shortcuts! I can't list them all!

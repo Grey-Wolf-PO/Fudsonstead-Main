@@ -1,0 +1,18 @@
+How to install  |
+________________|
+
+1. Look at the top of the text file in Quick Plugins. If you see the text "REQUIRES NODE.JS", please install it if you don't already have it. It is in the folder with this text file in it.
+
+2. Copy the contents of the text file with the name of the program you want to install.
+
+3. Open Terminal. (Applications >>> Utilities >>> Terminal if you're on a Mac, Start >>> Program Files >>> Accessories >>> Command Prompt for Windows.)
+
+4. Type "ls -alt" in the command window. If you see anything like .bashrc, .profile, or .bash_prrofile, remember that name.
+
+5. Type "sudo nano <name I just told you to remember>". It will ask you for your password. This is because you are editing a hidden file.
+
+6. Paste the contents of the file you copied in Step 2.
+
+7. You will see the commands and syntax commented out in the file.
+
+8. Enjoy! 

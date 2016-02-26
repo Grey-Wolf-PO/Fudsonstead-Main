@@ -1,0 +1,12 @@
+#gname {
+	color: #F28500;
+	font-family: Source Code Pro, serif;
+}
+#ename {
+	color: blue;
+	font-family: Source Code Pro, serif;
+}
+#addnum {
+	border: 2px dashed gold;
+	background-color: green;
+}

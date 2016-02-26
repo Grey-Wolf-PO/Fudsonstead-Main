@@ -1,0 +1,25 @@
+** PLEASE INSTALL PYTHON IF YOU DON'T ALREADY HAVE IT FROM THE FILE PYTHON.PKG **
+
+** ALSO, PLEASE INSTALL BEAUTIFULSOUP BEFORE YOU USE THIS PACKAGE **
+
+
+Instructions:
+
+1. Copy the contents of the file Bash Script.sh onto your clipboard.
+2. Open Terminal (Applications >>> Utilities >>> Terminal) and run this command sequence:
+
+1. cd ~
+2. sudo nano .bash_profile (It will ask you for your password. This is because you are accessing a hidden file.)
+
+3. Go to the bottom of the file that opened, and press Command-V. Then press Control-X, Y, and then Enter.
+
+COMMAND LIST:
+
+prep: Put the files in the folder "Python Scripts" before you run this command. Run this command when you have installed the package. (When you open terminal it will say "Parseweb Package V 1.0")
+E.X: "prep"
+
+parseweb: This command is the whole point of the package. Type it, a URL to receive in quotes, a class, and for an ID type a class and ID, but it will disregard the ID. 
+E.X: parseweb "https://www.google.com/" p would retrieve the first paragraph from google.com.
+E.X: "parseweb "https://www.google.com/" p hello" would retrieve the first paragraph with class hello from google.com.
+E.X: "parseweb "https://www.google.com/" p none hello" would retrieve the first paragraph with ID hello from google.com.
+

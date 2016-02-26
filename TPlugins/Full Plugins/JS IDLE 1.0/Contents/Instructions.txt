@@ -1,0 +1,28 @@
+** PLEASE INSTALL NODE.JS IF YOU DON'T ALREADY HAVE IT FROM THE FILE NODE.PKG **
+
+
+Instructions:
+
+1. Copy the contents of the file Bash Script.sh onto your clipboard.
+2. Open Terminal (Applications >>> Utilities >>> Terminal) and run this command sequence:
+
+1. cd ~
+2. sudo nano .bash_profile (It will ask you for your password. This is because you are accessing a hidden file.)
+
+3. Go to the bottom of the file that opened, and press Command-V. Then press Control-X, Y, and then Enter.
+
+COMMAND LIST:
+
+prep: Run this command when you have installed the package. (When you open terminal it will say "In-Shell JS IDLE 1.0")
+E.X: "prep"
+
+jsidle: Edits your scripts. Put the name of the file after the name and "-e" after that if you want to edit an already-created file. E.X: "jsidle numbers.txt" to create numbers.txt and "jsidle numbers.txt -e" to edit it.
+
+jsrun: Runs a script. Put the name of the file afterwards.
+E.X.: "jsrun numbers.txt"
+
+mvscript: Moves a script to the desktop. Put the name of the file after the command. E.X: "mvscript numbers.txt"
+
+
+
+

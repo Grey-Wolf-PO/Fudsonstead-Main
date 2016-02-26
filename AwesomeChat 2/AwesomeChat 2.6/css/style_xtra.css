@@ -1,0 +1,21 @@
+#email-sender{
+	border: 0.25em dashed #FFD700;
+	background-color: #BFEFFF;
+}
+#cname{
+	font-family: American-Typewriter, serif;
+	color: #F3F315;
+}
+#gname{
+	font-family: American-Typewriter, serif;
+	color: #F3A732;
+}
+#senmesano{
+	border: 0.25em dashed #FFD700;
+	background-color: #98FB98;
+}
+.announce {
+	color: #39FF14;
+	background-color: #FF0000;
+	padding: 0.25em;
+}
