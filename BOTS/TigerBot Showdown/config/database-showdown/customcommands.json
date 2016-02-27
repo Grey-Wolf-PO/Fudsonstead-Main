@@ -1,0 +1,32 @@
+{
+  "global": {
+    "nutz": {
+      "rank": "&",
+      "text": [
+        "DEEZ NUTS!!! HAHA GOTIM!"
+      ]
+    }
+  },
+  "lobby": {
+    "nutz": {
+      "rank": "&",
+      "text": [
+        "DEEZ NUTS!!! HAHA GOTIM!"
+      ]
+    }
+  },
+  "groupchat-shadowcune-memedomerevived": {
+    "prn": {
+      "rank": "~",
+      "text": [
+        "{arg}"
+      ]
+    },
+    "poll": {
+      "rank": "&",
+      "text": [
+        "/poll create {arg}, {arg2}, {arg3}, {arg4}"
+      ]
+    }
+  }
+}
