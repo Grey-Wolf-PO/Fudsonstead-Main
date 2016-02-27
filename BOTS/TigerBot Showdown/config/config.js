@@ -10,8 +10,8 @@ exports.info = {
 // information regarding the bot's login information
 // it can be left blank
 exports.bot = {
-    name: "Tiger's Sceptile",
-    pass: "pikabot165",
+    name: "NAME GOES HERE",
+    pass: "PASSWORD GOES HERE",
 };
 
 // this is the command character used in PMs and public rooms that do not specify what command character they want
