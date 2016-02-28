@@ -11,10 +11,10 @@ exports.commands = {
             text: [parts.slice(2).join(",").trim()],
         }
         let existing = Db("customcommands").get([targetRoom, toId(parts[0])], null);
-        if (Commands[toId(parts[0])]) return this.send("You cannot set a custom instruction with with the same name as a Sceptile instruction.")
-        if (existing) return this.send("This instruction already exists as a custom instruction in this room!");
+        if (Commands[toId(parts[0])]) return this.send("You cannot set a custom commmand with with the same name as another command.")
+        if (existing) return this.send("This command already exists as a custom command in this room / battle / groupchat!");
         Db("customcommands").set([targetRoom, toId(parts[0])], commandInformation);
-        this.send("**" + toId(parts[0]) + "** has been added as a custom instruction for your personal Sceptile.");
+        this.send("**" + toId(parts[0]) + "** has been added as a command in this room.");
     },
     delcom: function(target, room, user) {
         if (!this.can("addcom")) return false
