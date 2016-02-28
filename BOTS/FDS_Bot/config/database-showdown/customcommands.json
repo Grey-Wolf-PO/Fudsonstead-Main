@@ -1,27 +1,5 @@
 {
   "global": {
-    "nutz": {
-      "rank": "&",
-      "text": [
-        "DEEZ NUTS!!! HAHA GOTIM!"
-      ]
-    },
-    "burp": {
-      "rank": "+",
-      "text": [
-        "/me farts"
-      ]
-    }
-  },
-  "lobby": {
-    "nutz": {
-      "rank": "&",
-      "text": [
-        "DEEZ NUTS!!! HAHA GOTIM!"
-      ]
-    }
-  },
-  "groupchat-shadowcune-memedomerevived": {
     "prn": {
       "rank": "~",
       "text": [
@@ -34,28 +12,10 @@
         "/poll create {arg}, {arg2}, {arg3}, {arg4}"
       ]
     },
-    "lol": {
-      "rank": "+",
-      "text": [
-        "lol"
-      ]
-    },
-    "rand": {
-      "rank": "~",
-      "text": [
-        "{rand[10]}"
-      ]
-    },
     "1or2": {
       "rank": "+",
       "text": [
         "{rand[2]}"
-      ]
-    },
-    "ok": {
-      "rank": "+",
-      "text": [
-        "Hi"
       ]
     },
     "dicebattle": {
@@ -82,12 +42,6 @@
         "/wall PRIMAL KYOGRE!"
       ]
     },
-    "rekt": {
-      "rank": "+",
-      "text": [
-        "/wall Git Rekt mate"
-      ]
-    },
     "ann": {
       "rank": "~",
       "text": [
@@ -104,20 +58,6 @@
       "rank": "~",
       "text": [
         "/wall PRIMAL GROUDON!"
-      ]
-    }
-  },
-  "joim": {
-    "randdrunk": {
-      "rank": "~",
-      "text": [
-        "*drunk {rand[30]}"
-      ]
-    },
-    "rand": {
-      "rank": "~",
-      "text": [
-        "{rand[{arg}]}"
       ]
     }
   }
