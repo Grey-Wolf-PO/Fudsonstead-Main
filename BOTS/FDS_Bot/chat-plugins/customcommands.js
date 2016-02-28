@@ -1,6 +1,6 @@
 'use strict';
 exports.commands = {
-    addtscom: function(target, room, user) {
+    afdsc: function(target, room, user) {
         if (!this.can("addcom")) return false;
         if (!target) return this.parse("/help addcom");
         let targetRoom = room ? room.id : "global";
