@@ -1,0 +1,124 @@
+{
+  "global": {
+    "nutz": {
+      "rank": "&",
+      "text": [
+        "DEEZ NUTS!!! HAHA GOTIM!"
+      ]
+    },
+    "burp": {
+      "rank": "+",
+      "text": [
+        "/me farts"
+      ]
+    }
+  },
+  "lobby": {
+    "nutz": {
+      "rank": "&",
+      "text": [
+        "DEEZ NUTS!!! HAHA GOTIM!"
+      ]
+    }
+  },
+  "groupchat-shadowcune-memedomerevived": {
+    "prn": {
+      "rank": "~",
+      "text": [
+        "{arg}"
+      ]
+    },
+    "poll": {
+      "rank": "&",
+      "text": [
+        "/poll create {arg}, {arg2}, {arg3}, {arg4}"
+      ]
+    },
+    "lol": {
+      "rank": "+",
+      "text": [
+        "lol"
+      ]
+    },
+    "rand": {
+      "rank": "~",
+      "text": [
+        "{rand[10]}"
+      ]
+    },
+    "1or2": {
+      "rank": "+",
+      "text": [
+        "{rand[2]}"
+      ]
+    },
+    "ok": {
+      "rank": "+",
+      "text": [
+        "Hi"
+      ]
+    },
+    "dicebattle": {
+      "rank": "+",
+      "text": [
+        "{arg} rolled {rand[100]}, {arg[1]} rolled {rand[100]}"
+      ]
+    },
+    "dp": {
+      "rank": "+",
+      "text": [
+        "!dt {arg}"
+      ]
+    },
+    "ctt": {
+      "rank": "@",
+      "text": [
+        "Hello {arg} are u there?"
+      ]
+    },
+    "alpha": {
+      "rank": "+",
+      "text": [
+        "/wall PRIMAL KYOGRE!"
+      ]
+    },
+    "rekt": {
+      "rank": "+",
+      "text": [
+        "/wall Git Rekt mate"
+      ]
+    },
+    "ann": {
+      "rank": "~",
+      "text": [
+        "/wall {arg}"
+      ]
+    },
+    "lag": {
+      "rank": "+",
+      "text": [
+        "Lag is not here if you see this within 0.5 seconds."
+      ]
+    },
+    "omega": {
+      "rank": "~",
+      "text": [
+        "/wall PRIMAL GROUDON!"
+      ]
+    }
+  },
+  "joim": {
+    "randdrunk": {
+      "rank": "~",
+      "text": [
+        "*drunk {rand[30]}"
+      ]
+    },
+    "rand": {
+      "rank": "~",
+      "text": [
+        "{rand[{arg}]}"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "groupchat-shadowcune-memedomerevived": {
+    "bannedWords": {
+      "Summer Holiday": 3
+    }
+  },
+  "groupchat-shadowcune-botsandcode": {
+    "bannedWords": {
+      "BARK": 3
+    }
+  }
+}
