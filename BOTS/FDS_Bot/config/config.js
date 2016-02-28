@@ -10,15 +10,15 @@ exports.info = {
 // information regarding the bot's login information
 // it can be left blank
 exports.bot = {
-    name: "NAME GOES HERE",
-    pass: "PASSWORD GOES HERE",
+    name: "⋆FDS Bot⋆",
+    pass: "FILL IN PASSWORD HERE",
 };
 
 // this is the command character used in PMs and public rooms that do not specify what command character they want
-exports.defaultCharacter = ["*"];
+exports.defaultCharacter = ["$"];
 
 // minimum rank for using a command unless specified.
-exports.defaultRank = "@";
+exports.defaultRank = "+";
 
 // If this is disabled, monitor will not run.
 exports.monitorDefault = true;
