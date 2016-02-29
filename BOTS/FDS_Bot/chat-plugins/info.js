@@ -14,6 +14,27 @@ function getData(link, callback, https) {
 }
 
 exports.commands = {
+    reloadcmds: function() {
+        let uncache = [require.resolve("../commands.js")];
+        do {
+            let newuncache = [];
+            for (let i = 0; i < uncache.length; ++i) {
+                if (require.cache[uncache[i]]) {
+                    newuncache.push.apply(newuncache,
+                        require.cache[uncache[i]].children.map(function(module) {
+                            return module.filename;
+                        })
+                    );
+                    delete require.cache[uncache[i]];
+                }
+            }
+            uncache = newuncache;
+        } while (uncache.length > 0);
+        Commands = require('../commands.js').commands;
+        this.can("say")
+        this.send("CMDs reloaded.")
+        console.log()
+    },
     join: function(room) {
         this.can("say")
         this.send("/join " + room)
