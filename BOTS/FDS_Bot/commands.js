@@ -29,6 +29,7 @@ exports.commands = {
         Commands = require("./commands.js").commands;
         this.can("say")
         this.send("CMDs reloaded.")
+        console.log("Successfully reloaded commands.")
     },
     owner: function() {
         this.can("say");
