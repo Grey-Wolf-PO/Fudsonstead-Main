@@ -5,7 +5,85 @@ Tools.Pokedex = require("./data/pokedex.js").BattlePokedex;
 Tools.helpEntries = require("./help.js").help;
 Tools.Movedex = require("./data/moves.js").BattleMovedex;
 
+function uncacheTree(root) {
+    let uncache = [require.resolve(root)];
+    do {
+        let newuncache = [];
+        for (let i = 0; i < uncache.length; ++i) {
+            if (require.cache[uncache[i]]) {
+                newuncache.push.apply(newuncache,
+                    require.cache[uncache[i]].children.map(function(module) {
+                        return module.filename;
+                    })
+                );
+                delete require.cache[uncache[i]];
+            }
+        }
+        uncache = newuncache;
+    } while (uncache.length > 0);
+}  
+
 exports.commands = {
+    reloadcmds: function() {  
+        uncacheTree("./commands.js");
+        Commands = require("./commands.js").commands;
+        this.can("say")
+        this.send("CMDs reloaded.")
+    },
+    owner: function() {
+        this.can("say");
+        this.send("My owner is the awesome FDS group.");
+        this.can("set");
+    },
+    git: function(target, room, user) {
+        this.can("set");
+        this.send("I'm sorry, my GitHub repo is private.");
+    },
+    intro: function() {
+        this.can("say")
+        this.send("Hi! I'm " + Monitor.username + ", and I'm FDS's current bot.");
+        this.send("**You can request any changes made to me and my owner will consider it, and by the way I am based of FoxieBot.**")
+        this.send("Have a good day!")
+    },
+    drunk: function(howdrunk) {
+        if (!(howdrunk > 10)) {
+            for (var i = 0; i < howdrunk; i++) {
+                this.can("say");
+                this.send("Blibber jabber little labber nord rond");
+            }
+        }
+        else {
+            this.can("say")
+            this.send("The amount of drunkness you entered is too high. (Caps at ten)")
+        }
+    },
+    rcmd: function(command) {
+        if ((command.indexOf("/") === 0 || command.indexOf("!") === 0) && command != "/part" && command != "/logout" && command != "/leave") {
+            this.can("say")
+            this.send(command)
+        }
+        else {
+            this.can("say")
+            this.send("This text is not a command, or you have used a banned command.")
+        }
+    },
+    join: function(room) {
+        this.can("say")
+        this.send("/join " + room)
+    },
+    randsen: function() {
+        var nouns = ["Mrs. Teacher","Your butt","The frog","Joseph","Jake","Mr. President","The dog","The moose","Your fart","My turd","The car","Mr. Teacher","Connor Cook","The cookie","The snow","The bull","The cow","The sheep","My barn","The trolling cow","Pokémon Showdown"]
+        var assistingwords = ["stinkily","sternly","slowly","quickly","loudly","fiercely","lazily","carefully","carelessly","strongly","weakly","justly","buttishly","expertly","amateurly","freely","wierdly"]
+        var verbs = ["jumped","hopped","freaked out","farted","ran the race","ate","burped","became old and clumpy","yelled at the kid","programmed this website","skied down the hill","chomped on his dinner","jumped off the cliff","yelled 'YOLO!'","lied to the cops","hacked into the NSA","built the house","tried to impress the girls"]
+        var item1 = Math.floor(Math.random() * nouns.length)
+        var item2 = Math.floor(Math.random() * assistingwords.length)
+        var item3 = Math.floor(Math.random() * verbs.length)
+        this.can("say")
+        this.send(nouns[item1] + " " + assistingwords[item2] + " " + verbs[item3] + ".")
+    },
+    rand: function(x) {
+        this.send(Math.floor(Math.random() * (x - 0 + 1) + 0))
+    },
     say: function(target, room, user) {
         if (!this.can("say")) return false;
         return this.send(removeCommand(target));
@@ -135,6 +213,7 @@ exports.commands = {
         this.send("/roomban " + target + ", Blacklisted user.");
         this.send("/modnote \"" + target + "\" was added to the blacklist by " + user.name + ".");
         this.send(target + " was successfully added to the blacklist.");
+        this.send("/modnote " + target + " was forever banned until the magic command *unab is used.")
     },
     unab: "unautoban",
     unautoban: function(target, room, user) {

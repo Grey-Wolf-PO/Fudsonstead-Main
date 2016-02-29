@@ -14,26 +14,6 @@ function getData(link, callback, https) {
 }
 
 exports.commands = {
-    join: function(room) {
-        this.can("say")
-        this.send("/join " + room)
-    },
-    rcmd: function(command) {
-        if ((command.indexOf("/") === 0 || command.indexOf("!") === 0) && command != "/part" && command != "/logout" && command != "/leave") {
-            this.can("say")
-            this.send(command)
-        }
-        else {
-            this.can("say")
-            this.send("This text is not a command, or you have used a banned command.")
-        }
-    },
-    drunk: function(howdrunk) {
-        for (var i = 0; i < howdrunk; i++) {
-            this.can("say");
-            this.send("Blibber jabber little labber nord rond");
-        }
-    },
     seen: function(target, room, user) {
         if(!target) return this.parse("/help seen");
         this.can("set");
@@ -57,12 +37,6 @@ exports.commands = {
             this.send(e.replace(/^\//i, room ? room.commandCharacter[0] : Config.defaultCharacter));
         }.bind(this));
     },
-    intro: function() {
-        this.can("say")
-        this.send("Hi! I'm " + Monitor.username + ", and I'm Tigerball890's current bot.");
-        this.send("**You can request any changes made to me and my owner will consider it, and by the way I am based of FoxieBot.**")
-        this.send("Have a good day!")
-    },
     guide: function(target, room, user) {
         this.can("set");
         let useCommandCharacter = room ? room.commandCharacter[0] : Config.defaultCharacter[0];
@@ -72,15 +46,6 @@ exports.commands = {
         Tools.uploadToHastebin("Bot Commands: \n\n" + hastebin, function(link) {
             this.send("Bot Guide: " + link);
         }.bind(this));
-    },
-    git: function(target, room, user) {
-        this.can("set");
-        this.send("I'm sorry, I don't currently have a GitHub repo...");
-    },
-    owner: function() {
-        this.can("say");
-        this.send("My owner is ~Tigerball890");
-        this.can("set");
     },
     usage: function(target, room, user) {
         let baseLink = "http://www.smogon.com/stats/2016-01/";
