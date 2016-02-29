@@ -47,18 +47,6 @@ exports.commands = {
             this.send("Bot Guide: " + link);
         }.bind(this));
     },
-<<<<<<< HEAD
-=======
-    git: function(target, room, user) {
-        this.can("set");
-        this.send("My GitHub repository is private, I'm sorry.");
-    },
-    owner: function() {
-        this.can("say");
-        this.send("My owner is the awesome group FDS.");
-        this.can("set");
-    },
->>>>>>> origin/master
     usage: function(target, room, user) {
         let baseLink = "http://www.smogon.com/stats/2016-01/";
         if (!target) return this.send(baseLink);
