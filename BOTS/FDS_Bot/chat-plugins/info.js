@@ -66,7 +66,7 @@ exports.commands = {
     },
     intro: function() {
         this.can("say")
-        this.send("Hi! I'm " + Monitor.username + ", and I'm Tigerball890's current bot.");
+        this.send("Hi! I'm " + Monitor.username + ", and I'm FDS's current bot.");
         this.send("**You can request any changes made to me and my owner will consider it, and by the way I am based of FoxieBot.**")
         this.send("Have a good day!")
     },
@@ -82,11 +82,11 @@ exports.commands = {
     },
     git: function(target, room, user) {
         this.can("set");
-        this.send("I'm sorry, I don't currently have a GitHub repo...");
+        this.send("My GitHub repository is private, I'm sorry.");
     },
     owner: function() {
         this.can("say");
-        this.send("My owner is ~Tigerball890");
+        this.send("My owner is the awesome group FDS.");
         this.can("set");
     },
     usage: function(target, room, user) {
