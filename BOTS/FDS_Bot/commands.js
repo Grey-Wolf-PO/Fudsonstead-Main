@@ -69,7 +69,6 @@ exports.commands = {
         }
     },
     join: function(room) {
-        this.can("say")
         this.send("/join " + room)
     },
     randsen: function() {
