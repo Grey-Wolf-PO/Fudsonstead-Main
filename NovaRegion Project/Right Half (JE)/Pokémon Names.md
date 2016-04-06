@@ -15,3 +15,4 @@
 
 731: Bushanda, Grass type   
 
+732: Wireshark, Hacker Type
